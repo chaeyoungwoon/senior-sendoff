@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Senior Sendoff Message</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    .verse {
+      font-style: italic;
+      color: #555;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border-left: 4px solid #91c788;
+      background: #f0fff0;
+      min-height: 6rem;
+      white-space: pre-wrap;
+      font-size: 1.1rem;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Senior Sendoff 2025</h1>
+    <div id="verse" class="verse"></div>
+    <p>Thank you for leading, loving, and growing with us.<br>
+    You are not just finishing a chapter—you’re stepping into a mission.<br>
+    We send you with prayers, pride, and purpose.</p>
+    <div class="footer">— Your Soon Movement UCR Family 💙</div>
+  </div>
+
+  <script>
+    const text = `"For I know the plans I have for you," declares the Lord,
+"plans to prosper you and not to harm you,
+plans to give you hope and a future."
+— Jeremiah 29:11`;
+
+    const verseEl = document.getElementById("verse");
+    let i = 0;
+
+    function typeVerse() {
+      if (i < text.length) {
+        verseEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeVerse, 25); // adjust speed here (lower = faster)
+      }
+    }
+
+    window.onload = typeVerse;
+  </script>
+</body>
+</html>
