@@ -40,6 +40,12 @@
       white-space: pre-wrap;
       font-size: 1.1rem;
     }
+    .footer-message {
+      margin: 1.5rem 0 0 0;
+      font-size: 1.1rem;
+      color: #444;
+      font-weight: 500;
+    }
     .footer {
       margin-top: 2rem;
       font-size: 0.95rem;
@@ -51,10 +57,12 @@
   <div class="container">
     <h1>🎓 Senior Sendoff 2025</h1>
     <div id="verse" class="verse"></div>
-    <p>Thank you for leading, loving, and growing with us.<br>
-    You are not just finishing a chapter—you’re stepping into a mission.<br>
-    We send you with prayers, pride, and purpose.</p>
-    <div class="footer">— Your Soon Movement UCR Family 💙</div>
+    <p class="footer-message">
+      In the short time I’ve known all of you, you’ve made such a positive impact on my life.<br>
+      I truly believe you guys will all succeed in everything you set out to do.<br>
+      I pray that your futures are filled with prosperity and joy. Thank you so much!
+    </p>
+    <div class="footer"> - Ethan Choi 🌱</div>
   </div>
 
   <script>
@@ -70,7 +78,7 @@ plans to give you hope and a future."
       if (i < text.length) {
         verseEl.textContent += text.charAt(i);
         i++;
-        setTimeout(typeVerse, 25); // adjust speed here (lower = faster)
+        setTimeout(typeVerse, 25);
       }
     }
 
